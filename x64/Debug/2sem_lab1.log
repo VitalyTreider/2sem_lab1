@@ -1,0 +1,5 @@
+﻿  lab1.cpp
+C:\Users\user\Polytech\Labs\2sem_lab1\lab1.cpp(88,14): error C2512: Rect: нет подходящего конструктора по умолчанию
+      C:\Users\user\Polytech\Labs\2sem_lab1\rect.hpp(1,7):
+       см. объявление "Rect"
+  
