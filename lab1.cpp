@@ -320,7 +320,11 @@ int main()
      */
 
     {
-
+        Rect rect(1, 3, 3, 1);
+        std::cout << "Height: " << rect.get_height() << "; Widht: " << rect.get_width() << std::endl;
+        rect.set_height(4);
+        rect.set_width(4);
+        std::cout << "Height now: " << rect.get_height() << "; Widht now: " << rect.get_width() << std::endl;
     }
 
     /**
@@ -355,16 +359,20 @@ int main()
      * блоке превратиться в настоящий код и решить задачу.
      */
 
-    /* {
-        Bochka alch(...); // бочка со спиртом
-        Bochka water(...);
+    {
+        Bochka alch(10, 96); // бочка со спиртом
+        Bochka water(10, 0);
+        int cnt = 0;
 
-        while(концентрация спирта в бочке alch > 50%)
+        while(alch.get_palch() > 50)
         {
-            alch.<перелить из>(water, ...);
-            water.<перелить из>(alch, ...);
+            alch.transfer(1, water);
+            water.transfer(1, alch);
+            cnt += 1;
         }
-    } */
+        std::cout << "Nomer iteration: " << cnt << std::endl;
+        std::cout << "Concentration in bochka: " << alch.get_palch() << std::endl;
+    }
 
     /**
      * Задание 2.2. Объект как математическая сущность.
